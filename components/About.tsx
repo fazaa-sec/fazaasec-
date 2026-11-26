@@ -6,6 +6,21 @@ const STEPS = [
   { title: 'Secure', text: 'Fix what broke, then keep watch with monitoring, updates and a monthly report.' },
 ];
 
+const CASES = [
+  {
+    title: 'Case 1 - Exposed API Key',
+    text: 'Found a live OpenAI key exposed in a client frontend. Rotated the key, moved it to server-side env, and added key-scanning to CI. Fixed in 2 hours, before any abuse.'
+  },
+  {
+    title: 'Case 2 - Open Database (RLS)',
+    text: 'Found a Supabase table with RLS disabled, anyone could read user data. Enabled RLS, wrote secure policies, and re-tested with unauthenticated access. Closed before launch.'
+  },
+  {
+    title: 'Case 3 - AI-Generated App Audit',
+    text: 'Audited an AI-built SaaS in 48h. Found 3 IDOR issues + 1 exposed admin route. Delivered PDF report with fix code. Client shipped secure version in 3 days.'
+  },
+];
+
 export default function About() {
   return (
     <section id="about" className="section">
@@ -27,6 +42,19 @@ export default function About() {
               My lab work covers SOC detections, threat intelligence and privilege escalation. My
               build work covers web apps, Telegram bots and Android and Flutter apps.
             </p>
+          </div>
+
+          {/* Case Studies */}
+          <div className="mt-10">
+            <h3 className="text-xl font-bold">Case Studies - Real Work</h3>
+            <div className="mt-4 space-y-4">
+              {CASES.map((c) => (
+                <div key={c.title} className="rounded-xl border border-white/10 bg-white/5 p-4">
+                  <p className="font-bold text-white">{c.title}</p>
+                  <p className="mt-1 leading-relaxed text-white/70">{c.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
