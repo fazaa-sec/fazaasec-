@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="bg-grid pointer-events-none absolute inset-0" aria-hidden="true" />
-      <img src="/hero/hero.jpg" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15" />
+      <img src="/hero/hero.jpg" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24 lg:grid-cols-[1.5fr_1fr]">
         <div>
