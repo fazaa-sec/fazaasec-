@@ -6,10 +6,11 @@ import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
 import Services from '@/components/Services';
 import Templates from '@/components/Templates';
+import { LangProvider } from '@/components/LanguageContext';
 
 export default function Home() {
   return (
-    <>
+    <LangProvider>
       <Navbar />
       <main id="main">
         <Hero />
@@ -20,6 +21,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </LangProvider>
   );
 }
