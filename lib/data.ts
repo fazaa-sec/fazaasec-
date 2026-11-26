@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
     name: 'Threat Intel Portfolio',
     stack: ['Threat Intel', 'Analysis'],
     description: 'Threat Intelligence portfolio - analysis and reports',
-    status: 'Built',
+    status: 'Secured',
     repo: 'https://github.com/fazaa-sec/Threat-Intel-Portfolio',
   },
   {
@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
     name: 'SIM Guardian Telegram',
     stack: ['Python', 'Telegram Bot'],
     description: 'Telegram bot for SIM protection and security alerts',
-    status: 'Built',
+    status: 'Secured',
     repo: 'https://github.com/fazaa123-spec/sim-guardian-telegram',
   },
   {
