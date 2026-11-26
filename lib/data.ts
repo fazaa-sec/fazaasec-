@@ -54,8 +54,6 @@ const PRIVATE_NOTE = 'Private Project - Details on request';
 
 // TODO: replace `repo` with each project's exact repository URL once you want deep links.
 // Until then the public projects link to your GitHub profile.
-export const PROJECTS: Project[] = [
-export const PROJECTS: Project[] = [
   {
     name: 'Threat Intel Portfolio',
     stack: ['Threat Intel', 'Analysis'],
