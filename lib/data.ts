@@ -55,42 +55,49 @@ const PRIVATE_NOTE = 'Private Project - Details on request';
 // TODO: replace `repo` with each project's exact repository URL once you want deep links.
 // Until then the public projects link to your GitHub profile.
 export const PROJECTS: Project[] = [
+export const PROJECTS: Project[] = [
   {
-  title: "Threat Intel Portfolio",
-  description: "Threat Intelligence portfolio - analysis and reports",
-  githubUrl: "https://github.com/fazaa-sec/Threat-Intel-Portfolio",
-  liveUrl: "https://github.com/fazaa-sec/Threat-Intel-Portfolio",
-},
-{
-  title: "LockBit 3.0 TTP Analysis",
-  description: "Analysis of LockBit 3.0 Tactics, Techniques and Procedures",
-  githubUrl: "https://github.com/fazaa-sec/LockBit-3.0-TTP-Analysis-",
-  liveUrl: "https://github.com/fazaa-sec/LockBit-3.0-TTP-Analysis-",
-},
-{
-  title: "AI SOC Copilot",
-  description: "AI assistant for Security Operations Center",
-  githubUrl: "https://github.com/fazaa-sec/AI-SOC-Copilot",
-  liveUrl: "https://github.com/fazaa-sec/AI-SOC-Copilot",
-},
-{
-  title: "SCO Detections Lab",
-  description: "Detection engineering lab - Sigma / KQL detections",
-  githubUrl: "https://github.com/fazaa-sec/SCO-Detections-Lab",
-  liveUrl: "https://github.com/fazaa-sec/SCO-Detections-Lab",
-},
-{
-  title: "SIM Guardian Telegram",
-  description: "Telegram bot for SIM protection and security alerts",
-  githubUrl: "https://github.com/fazaa123-spec/sim-guardian-telegram",
-  liveUrl: "https://github.com/fazaa123-spec/sim-guardian-telegram",
-},
-{
-  title: "Jobs Platform",
-  description: "Jobs platform - live web app",
-  githubUrl: "https://github.com/fazaa-sec",
-  liveUrl: "https://jobs3-sable.vercel.app",
-},
+    name: 'Threat Intel Portfolio',
+    stack: ['Threat Intel', 'Analysis'],
+    description: 'Threat Intelligence portfolio - analysis and reports',
+    status: 'Built',
+    repo: 'https://github.com/fazaa-sec/Threat-Intel-Portfolio',
+  },
+  {
+    name: 'LockBit 3.0 TTP Analysis',
+    stack: ['Malware', 'TTPs'],
+    description: 'Analysis of LockBit 3.0 Tactics, Techniques and Procedures',
+    status: 'Built',
+    repo: 'https://github.com/fazaa-sec/LockBit-3.0-TTP-Analysis-',
+  },
+  {
+    name: 'AI SOC Copilot',
+    stack: ['AI', 'SOC'],
+    description: 'AI assistant for Security Operations Center',
+    status: 'Built',
+    repo: 'https://github.com/fazaa-sec/AI-SOC-Copilot',
+  },
+  {
+    name: 'SCO Detections Lab',
+    stack: ['Sigma', 'KQL'],
+    description: 'Detection engineering lab - Sigma / KQL detections',
+    status: 'Built',
+    repo: 'https://github.com/fazaa-sec/SCO-Detections-Lab',
+  },
+  {
+    name: 'SIM Guardian Telegram',
+    stack: ['Python', 'Telegram Bot'],
+    description: 'Telegram bot for SIM protection and security alerts',
+    status: 'Built',
+    repo: 'https://github.com/fazaa123-spec/sim-guardian-telegram',
+  },
+  {
+    name: 'Jobs Platform',
+    stack: ['Next.js', 'Web'],
+    description: 'Jobs platform - live web app',
+    status: 'Built',
+    repo: 'https://jobs3-sable.vercel.app',
+  },
   {
     name: 'E3maar App',
     stack: ['Dart', 'Flutter'],
