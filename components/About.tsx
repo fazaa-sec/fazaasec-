@@ -26,6 +26,7 @@ export default function About() {
     <section id="about" className="section">
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
+          <img src="/about/bg.jpg" className="mb-6 h-64 w-full rounded-2xl object-cover" />
           <h2 className="h2">About {OWNER_NAME}</h2>
           <div className="mt-6 space-y-4 leading-relaxed text-white/75">
             <p>
