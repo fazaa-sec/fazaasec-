@@ -51,6 +51,8 @@ export default function Projects() {
     <section id="projects" className="section">
       <h2 className="h2">12 projects across defense, detection and delivery.</h2>
 
+      <img src="/case-studies/case.jpg" className="mt-8 h-64 w-full rounded-2xl object-cover md:h-80" />
+
       <div className="mt-12 space-y-14">
         {GROUPS.map((g) => {
           const items = PROJECTS.filter((p) => p.status === g.status);
