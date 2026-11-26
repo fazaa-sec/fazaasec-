@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
 import Services from '@/components/Services';
+import Templates from '@/components/Templates';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Projects />
+        <Templates />
         <About />
         <Contact />
       </main>
