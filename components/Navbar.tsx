@@ -2,16 +2,20 @@
 
 import { useState } from 'react';
 import { Icon } from './Icons';
-
-const LINKS = [
-  { label: 'Services', href: '#services' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
-];
+import { useLang } from './LanguageContext';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { lang, setLang } = useLang();
+  const isAr = lang === 'ar';
+
+  const LINKS = [
+    { label: isAr ? 'خدماتي' : 'Services', href: '#services' },
+    { label: isAr ? 'أعمالي' : 'Projects', href: '#projects' },
+    { label: isAr ? 'صفحات جاهزة' : 'Templates', href: '#templates' },
+    { label: isAr ? 'عني' : 'About', href: '#about' },
+    { label: isAr ? 'تواصل' : 'Contact', href: '#contact' },
+  ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/85 backdrop-blur">
@@ -36,20 +40,36 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a href="#contact" className="btn-primary hidden !py-2 md:inline-flex">
-          Get a security audit
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <button
+            onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
+            className="rounded-full border border-white/20 px-3 py-1.5 text-sm font-bold"
+          >
+            {lang === 'en' ? 'عربي | EN' : 'EN | عربي'}
+          </button>
+          <a href="#contact" className="btn-primary hidden !py-2 md:inline-flex">
+            {isAr ? 'اطلب فحص أمني' : 'Get a security audit'}
+          </a>
+        </div>
 
-        <button
-          type="button"
-          className="grid h-10 w-10 place-items-center rounded-md border border-white/15 md:hidden"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          onClick={() => setOpen((v) => !v)}
-        >
-          <Icon name={open ? 'x' : 'menu'} />
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
+            className="rounded-full border border-white/20 px-3 py-1.5 text-sm font-bold"
+          >
+            {lang === 'en' ? 'عربي' : 'EN'}
+          </button>
+          <button
+            type="button"
+            className="grid h-10 w-10 place-items-center rounded-md border border-white/15"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <Icon name={open ? 'x' : 'menu'} />
+          </button>
+        </div>
       </nav>
 
       {open && (
@@ -68,7 +88,7 @@ export default function Navbar() {
             ))}
             <li className="py-3">
               <a href="#contact" onClick={() => setOpen(false)} className="btn-primary w-full">
-                Get a security audit
+                {isAr ? 'اطلب فحص أمني' : 'Get a security audit'}
               </a>
             </li>
           </ul>
