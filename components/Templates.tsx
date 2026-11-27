@@ -4,18 +4,24 @@ const TEMPLATES = [
     desc: 'Menu, food photos, WhatsApp order button, and location.',
     price: '$50',
     time: 'Delivery in 24h',
+    image: '/restaurant.jpg',
+    emoji: '🍔',
   },
   {
     title: 'Perfume / Fashion Store',
     desc: 'Product showcase, prices, WhatsApp buy button, and Instagram link.',
     price: '$80',
     time: 'Delivery in 48h',
+    image: '/perfume.jpg',
+    emoji: '👗',
   },
   {
     title: 'Doctor / Clinic Page',
     desc: 'Clinic services, booking times, patient reviews, and WhatsApp button.',
     price: '$50',
     time: 'Delivery in 24h',
+    image: '/clinic.jpg',
+    emoji: '🩺',
   },
 ];
 
@@ -27,8 +33,11 @@ export default function Templates() {
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {TEMPLATES.map((t) => (
           <div key={t.title} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <div className="flex h-40 items-center justify-center bg-emerald-400/10 text-2xl font-bold text-emerald-400">
-              {t.title}
+            <div className="relative flex h-40 items-center justify-center overflow-hidden bg-emerald-400/10">
+              <img src={t.image} alt={t.title} className="h-full w-full object-cover" />
+              <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-3 py-1 text-2xl">
+                {t.emoji}
+              </span>
             </div>
             <div className="p-5">
               <h3 className="text-xl font-bold">{t.title}</h3>
