@@ -5,9 +5,9 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3
   '',
 );
 
-export const BRAND = 'FAZAA SEC';
-export const OWNER_NAME = 'Muatez Mhgoub Margani';
-export const LOCATION = 'Sudan / Egypt';
+export const BRAND = 'M. Margani';
+export const OWNER_NAME = 'Muatez Mhgoub';
+export const LOCATION = 'Freelance work ';
 export const EXPERIENCE_YEARS = 6;
 
 export const GITHUB_URL = "https://github.com/fazaa-sec"
