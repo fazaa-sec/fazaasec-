@@ -18,7 +18,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Audit',
     tag: '48h',
     price: 'From $149',
-    description: 'Full security audit in 48 hours: RLS, IDOR, Exposed Keys + PDF Report',
+    description: 'I do a full security audit in 48 hours: RLS, IDOR, Exposed Keys + PDF Report',
     icon: 'search',
   },
   {
@@ -26,7 +26,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Build',
     price: 'From $500',
     description:
-      'Build website / app from zero to launch, built right and secured from day one',
+      'I build your website / app from zero to launch, built right and secured from day one',
     icon: 'tool',
   },
   {
@@ -34,7 +34,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Secure',
     tag: 'Monthly',
     price: 'From $199/mo',
-    description: 'Monthly protection: Monitoring + Updates + Monthly Report',
+    description: 'Monthly protection by me: Monitoring + Updates + Monthly Report',
     icon: 'lock',
   },
 ];
